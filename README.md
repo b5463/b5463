@@ -1,11 +1,11 @@
-<pre>
-b5463@github:~$ whoami
-Alexander Jakub Moravčík
+<p align="center">
+  <img src="./assets/b5463-ascii.png" alt="b5463 ASCII wordmark" width="593">
+</p>
 
-b5463@github:~$ focus --active
-kino-d4    four-camera hardware + USB workbench
-systems    self-hosted deployment engine
-</pre>
+<p align="center">
+  Alexander Jakub Moravčík<br>
+  hardware / software / self-hosted infrastructure
+</p>
 
 <p align="center">
   <a href="https://github.com/b5463/kino-d4">[ KINO D4 ]</a>
