@@ -1,57 +1,37 @@
-<p align="center">
-  <img src="assets/header.svg" width="100%" alt="B5463. Alexander Jakub Moravčík. Static ASCII camera diagnostic panel." />
-</p>
-
-<p align="center">
-  <a href="https://github.com/b5463/kino-d4"><b>[ KINO D4 ]</b></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/b5463/systems"><b>[ SYSTEMS. ]</b></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/sponsors/b5463"><b>[ SPONSOR ]</b></a>
-</p>
-
-I'm Alex. I make cameras, self-hosted software, and the ugly control panels you need when five microcontrollers or a pile of containers stop agreeing with each other.
-
-I like machinery you can open, software you can run yourself, and status lights backed by a real check.
-
 <pre>
-+-- CURRENT BENCH --------------------------------------------+
-| KINO D4 / D4-V1 / PROTOTYPE                                |
-| 4 VIEWPOINTS / 1 SHUTTER / ORIGINALS FIRST                 |
-+-------------------------------------------------------------+
++--------------+--------------+--------------+--------------+
+| CAM 01       | CAM 02       | CAM 03       | CAM 04       |
+|     .--.     |      .--.    |       .--.   |        .--.  |
+|    /        |     /       |      /      |       /     |
+|    ____/    |     ____/   |      ____/  |       ____/ |
+|      01      |       02     |        03    |         04   |
++--------------+--------------+--------------+--------------+
+
+ALEXANDER JAKUB MORAVČÍK                                      b5463
 </pre>
+
+I build things that live somewhere between a workbench and a server rack.
+
+The current one has four lenses and a lot of UART.
 
 ## 01 / [KINO D4](https://github.com/b5463/kino-d4)
 
-Four lenses fire from slightly different positions. The camera keeps all four originals, then turns them into a short loop with real parallax. No generated in-between frames and no cloud near the shutter.
+A handmade four-lens camera for party photographs. One shutter fires four viewpoints, keeps every original, and can turn them into a short loop with real parallax.
 
-The repository has the hardware build, KDP wire protocol, USB Studio, simulator, shared schemas, and the recovery paths for when something goes wrong.
+The repository contains the D4 hardware build, its wire protocol, the USB workbench, and a reference camera that can fail on command.
 
-<code>ESP32-P4</code> <code>4× ESP32-S3</code> <code>TypeScript</code> <code>React</code> <code>Web Serial</code>
-
-<p align="center"><img src="assets/capture-loop.svg" width="100%" alt="KINO D4 ASCII capture loop cycling through four viewpoints." /></p>
-
-**[OPEN THE CAMERA →](https://github.com/b5463/kino-d4)**
-
----
+<code>D4-V1 prototype / ESP32-P4 / four ESP32-S3 camera nodes</code>
 
 ## 02 / [SYSTEMS.](https://github.com/b5463/systems)
 
-Drop in a zip and get an HTTPS subdomain on your own machine. SYSTEMS. runs the build in Docker and keeps deployments, logs, observed health, rollback, and backups behind one admin login.
+A small deployment engine for my own machines. Give it a zip and it handles the container, HTTPS route, logs, health, rollback, and backups.
 
-It is small on purpose. No public signup, no rented control plane, and no green light unless the machine answered a real check.
+No public signup. No rented control plane. A system is only green after it answers a real check.
 
-<code>Vue</code> <code>Fastify</code> <code>Docker</code> <code>Caddy</code> <code>SQLite</code> <code>PostgreSQL</code>
-
-**[OPEN THE ENGINE →](https://github.com/b5463/systems)**
+<code>2.0 release candidate / Vue / Fastify / Docker / Caddy</code>
 
 <pre>
-+-- TOOL DRAWER ----------------------------------------------+
-| TypeScript / React / Vue / Node.js / Fastify               |
-| PostgreSQL / Docker / Caddy / ESP32 / Web Serial           |
-+-------------------------------------------------------------+
+originals first  //  local control  //  observed status  //  repairable hardware
 </pre>
 
-<p align="center">
-  If either repo saves you from a bad weekend, <a href="https://github.com/sponsors/b5463">help pay for the next spool of wire</a>.
-</p>
+<p align="right"><a href="https://github.com/sponsors/b5463">sponsor the next build</a></p>
