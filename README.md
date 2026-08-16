@@ -37,7 +37,7 @@ KINO D4 is a handmade four-lens camera. One shutter press captures four viewpoin
 [CAM 02]--+
 [CAM 03]--+-->[shared sync]-->[ESP32-P4]-->[microSD originals]
 [CAM 04]--+                         |
-                                   +-->[USB / KDP]-->[KINO Studio]
+                                    +-->[USB / KDP]-->[KINO Studio]
 
 hardware      D4-V1 / prototype
 studio        0.9.0
