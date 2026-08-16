@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460" role="img" aria-labelledby="title desc">
+  <title id="title">B5463. Alexander Jakub Moravčík.</title>
+  <desc id="desc">Animated ASCII profile header cycling through four synchronized KINO D4 camera frames.</desc>
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d7d9d8"/>
+      <stop offset=".12" stop-color="#777d80"/>
+      <stop offset=".28" stop-color="#c3c6c5"/>
+      <stop offset=".5" stop-color="#5f666a"/>
+      <stop offset=".72" stop-color="#aeb3b4"/>
+      <stop offset="1" stop-color="#454b4e"/>
+    </linearGradient>
+    <linearGradient id="warm" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f2d17"/>
+      <stop offset=".35" stop-color="#9b6030"/>
+      <stop offset=".58" stop-color="#6f3f20"/>
+      <stop offset="1" stop-color="#b1763c"/>
+    </linearGradient>
+    <pattern id="brush" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 1H8M0 4H8M0 7H8" stroke="#ffffff" stroke-opacity=".06"/>
+    </pattern>
+    <pattern id="grain" width="80" height="32" patternUnits="userSpaceOnUse">
+      <path d="M-8 8C12 0 25 16 46 7S76 8 92 2M-5 23C16 15 34 29 55 19S79 20 92 16" fill="none" stroke="#ddb278" stroke-opacity=".18"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="8" dy="9" stdDeviation="0" flood-color="#000000" flood-opacity=".75"/>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .small { font-size: 13px; letter-spacing: 2px; fill: #aab0b2; }
+      .tiny { font-size: 11px; letter-spacing: 1.5px; fill: #9b6030; }
+      .ascii { font-size: 24px; font-weight: 700; fill: #ece9df; }
+      .screen { font-size: 15px; fill: #d8d8cf; }
+      @media (prefers-reduced-motion: reduce) { .motion { display: none; } }
+    </style>
+  </defs>
+
+  <rect width="1000" height="460" fill="#090a0b"/>
+  <rect x="14" y="14" width="972" height="432" fill="url(#warm)" stroke="#050505" stroke-width="8"/>
+  <rect x="14" y="14" width="972" height="432" fill="url(#grain)"/>
+  <rect x="34" y="32" width="932" height="396" fill="url(#steel)" stroke="#070809" stroke-width="7" filter="url(#shadow)"/>
+  <rect x="34" y="32" width="932" height="396" fill="url(#brush)"/>
+
+  <g fill="#111315" stroke="#050505" stroke-width="3">
+    <circle cx="57" cy="55" r="11"/><path d="M51 55H63M57 49V61" stroke="#70777a"/>
+    <circle cx="943" cy="55" r="11"/><path d="M937 55H949M943 49V61" stroke="#70777a"/>
+    <circle cx="57" cy="405" r="11"/><path d="M51 405H63M57 399V411" stroke="#70777a"/>
+    <circle cx="943" cy="405" r="11"/><path d="M937 405H949M943 399V411" stroke="#70777a"/>
+  </g>
+
+  <rect x="73" y="76" width="854" height="304" fill="#0b0d0e" stroke="#050505" stroke-width="6"/>
+  <path d="M73 112H927M550 112V380" stroke="#5e6568" stroke-width="2"/>
+  <path d="M77 380H931" stroke="#d6d8d7" stroke-opacity=".42" stroke-width="2"/>
+
+  <g class="mono">
+    <text x="94" y="100" class="small">IDENT // B5463</text>
+    <text x="572" y="100" class="small">KINO_D4 // FRAME BUFFER</text>
+
+    <text x="95" y="156" class="ascii" xml:space="preserve">
+      <tspan x="95" dy="0"> ____   ____    _  _     __     _____</tspan>
+      <tspan x="95" dy="30">| __ ) | ___|  | || |   / /_   |___ /</tspan>
+      <tspan x="95" dy="30">|  _  |___   | || |_ | '_     |_ </tspan>
+      <tspan x="95" dy="30">| |_) | ___) | |__   _|| (_) |  ___) |</tspan>
+      <tspan x="95" dy="30">|____/ |____/     |_|   ___/  |____/</tspan>
+    </text>
+
+    <text x="96" y="329" class="small">ALEXANDER JAKUB MORAVČÍK</text>
+    <text x="96" y="352" class="tiny">CAMERAS / LOCAL SYSTEMS / THINGS THAT REPORT THE TRUTH</text>
+
+    <g transform="translate(575 136)">
+      <g opacity="1">
+        <animate class="motion" attributeName="opacity" values="1;0;0;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <text class="screen" xml:space="preserve">
+          <tspan x="0" dy="0">+---------------------------------+</tspan>
+          <tspan x="0" dy="22">| CAPTURE 01/04       SYNC: ARMED |</tspan>
+          <tspan x="0" dy="22">|                                 |</tspan>
+          <tspan x="0" dy="22">| [01]   02    03    04           |</tspan>
+          <tspan x="0" dy="22">|  [o]   [o]   [o]   [o]         |</tspan>
+          <tspan x="0" dy="22">|===|=====|=====|=====|===========|</tspan>
+          <tspan x="0" dy="22">|       * SUBJECT                 |</tspan>
+          <tspan x="0" dy="22">+---------------------------------+</tspan>
+        </text>
+      </g>
+      <g opacity="0">
+        <animate class="motion" attributeName="opacity" values="0;1;0;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <text class="screen" xml:space="preserve">
+          <tspan x="0" dy="0">+---------------------------------+</tspan>
+          <tspan x="0" dy="22">| CAPTURE 02/04       SYNC: ARMED |</tspan>
+          <tspan x="0" dy="22">|                                 |</tspan>
+          <tspan x="0" dy="22">|  01   [02]   03    04           |</tspan>
+          <tspan x="0" dy="22">|  [o]   [o]   [o]   [o]         |</tspan>
+          <tspan x="0" dy="22">|===|=====|=====|=====|===========|</tspan>
+          <tspan x="0" dy="22">|          * SUBJECT              |</tspan>
+          <tspan x="0" dy="22">+---------------------------------+</tspan>
+        </text>
+      </g>
+      <g opacity="0">
+        <animate class="motion" attributeName="opacity" values="0;0;1;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <text class="screen" xml:space="preserve">
+          <tspan x="0" dy="0">+---------------------------------+</tspan>
+          <tspan x="0" dy="22">| CAPTURE 03/04       SYNC: ARMED |</tspan>
+          <tspan x="0" dy="22">|                                 |</tspan>
+          <tspan x="0" dy="22">|  01    02   [03]   04           |</tspan>
+          <tspan x="0" dy="22">|  [o]   [o]   [o]   [o]         |</tspan>
+          <tspan x="0" dy="22">|===|=====|=====|=====|===========|</tspan>
+          <tspan x="0" dy="22">|             * SUBJECT           |</tspan>
+          <tspan x="0" dy="22">+---------------------------------+</tspan>
+        </text>
+      </g>
+      <g opacity="0">
+        <animate class="motion" attributeName="opacity" values="0;0;0;1" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
+        <text class="screen" xml:space="preserve">
+          <tspan x="0" dy="0">+---------------------------------+</tspan>
+          <tspan x="0" dy="22">| CAPTURE 04/04       SYNC: ARMED |</tspan>
+          <tspan x="0" dy="22">|                                 |</tspan>
+          <tspan x="0" dy="22">|  01    02    03   [04]          |</tspan>
+          <tspan x="0" dy="22">|  [o]   [o]   [o]   [o]         |</tspan>
+          <tspan x="0" dy="22">|===|=====|=====|=====|===========|</tspan>
+          <tspan x="0" dy="22">|                * SUBJECT        |</tspan>
+          <tspan x="0" dy="22">+---------------------------------+</tspan>
+        </text>
+      </g>
+    </g>
+
+    <rect class="motion" x="554" y="116" width="2" height="260" fill="#b1763c" opacity=".8">
+      <animate attributeName="x" values="554;923;554" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".15;.85;.15" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <text x="78" y="415" class="tiny">[ PARTS ]--[ WIRES ]--[ PROTOCOL ]--[ INTERFACE ]--[ OPERATIONS ]</text>
+    <text x="860" y="415" class="tiny">REV. 02</text>
+  </g>
+</svg>
