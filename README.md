@@ -1,100 +1,114 @@
 <pre>
- ____   ____    _  _     __     _____
-| __ ) | ___|  | || |   / /_   |___ /
-|  _  |___   | || |_ | '_     |_ | |_) | ___) | |__   _|| (_) |  ___) |
-|____/ |____/     |_|   ___/  |____/
+b5463@github:~$ whoami
+Alexander Jakub Moravčík
 
-ALEXANDER JAKUB MORAVČÍK
-hardware / software / self-hosted infrastructure
+b5463@github:~$ focus --active
+kino-d4    four-camera hardware + USB workbench
+systems    self-hosted deployment engine
 </pre>
 
 <p align="center">
-  <a href="https://github.com/b5463/kino-d4">[ kino-d4 ]</a>
+  <a href="https://github.com/b5463/kino-d4">[ KINO D4 ]</a>
   &nbsp;&nbsp;
-  <a href="https://github.com/b5463/systems">[ systems ]</a>
+  <a href="https://github.com/b5463/systems">[ SYSTEMS. ]</a>
   &nbsp;&nbsp;
-  <a href="https://github.com/sponsors/b5463">[ sponsors ]</a>
+  <a href="https://github.com/sponsors/b5463">[ SPONSOR ]</a>
 </p>
 
-## 00 / overview
+Most of my work sits between a physical device and the software needed to configure, inspect, recover, and ship it.
+
+## 00 / active
 
 <pre>
-+-- active projects -----------------------------------------------------------+
-|                                                                             |
-|  01  KINO D4       D4-V1 prototype        hardware + application           |
-|  02  SYSTEMS.      2.0 release candidate  deployment + operations          |
-|                                                                             |
-+-----------------------------------------------------------------------------+
++----+------------+-------------------+----------------------------------+
+| ID | PROJECT    | STATE             | SCOPE                            |
++----+------------+-------------------+----------------------------------+
+| 01 | KINO D4    | D4-V1 prototype   | camera hardware + application    |
+| 02 | SYSTEMS.   | 2.0.0-rc.1        | deployment + host operations     |
++----+------------+-------------------+----------------------------------+
 </pre>
 
 ## 01 / [KINO D4](https://github.com/b5463/kino-d4)
 
+Four camera modules capture at the same instant. The originals stay intact; the software can turn them into a short parallax loop afterward.
+
 <pre>
-project       four-camera digital camera and USB workbench
-hardware      D4-V1 prototype
+[CAM 01]--+
+[CAM 02]--+
+[CAM 03]--+-->[shared sync]-->[ESP32-P4]-->[microSD originals]
+[CAM 04]--+                         |
+                                   +-->[USB]-->[KINO Studio]
+
+hardware      D4-V1 / prototype
 studio        0.9.0
 protocol      KDP 1
-license       MIT software / CERN-OHL-S-2.0 hardware
-
-[CAM 1]---[CAM 2]----[CAM 3]-----+-->[ESP32-P4]-->[microSD originals]
-[CAM 4]----/
-             shared sync
-
-repository
-  hardware documentation
-  KDP wire protocol
-  KINO Studio
-  schemas and simulator
-  API foundation
-
-<a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
+license       CERN-OHL-S-2.0 hardware / MIT software
 </pre>
+
+<details>
+<summary>repository map</summary>
+
+<pre>
+hardware/       D4-V1 build files, manifest, revisions, ECNs
+apps/studio/    USB control and capture interface
+apps/api/       API foundation
+packages/kdp/   KINO Device Protocol
+packages/       schemas, simulator, and test fixtures
+docs/           build, bring-up, recovery, and release notes
+</pre>
+
+</details>
+
+[`OPEN KINO D4 ->`](https://github.com/b5463/kino-d4)
 
 ## 02 / [SYSTEMS.](https://github.com/b5463/systems)
 
+A self-hosted deployment engine for taking a zip build through containers, HTTPS routing, checks, rollback, and backup.
+
 <pre>
-project       self-hosted deployment engine
-version       2.0.0-rc.1
+[ZIP]-->[BUILD]-->[DOCKER]-->[CADDY]-->[HTTPS]
+                    |
+                    +-->[LOGS]
+                    +-->[HEALTH]
+                    +-->[ROLLBACK]
+                    +-->[BACKUPS]
+
+release       2.0.0-rc.1
 access        admin only
 validation    Windows host pending
 license       PolyForm Noncommercial 1.0.0
-
-[ZIP]
-  |
-[BUILD]
-  |
-[DOCKER]-->[LOGS]-->[HEALTH]-->[ROLLBACK]
-  |
-[CADDY]
-  |
-[HTTPS]
-
-repository
-  Vue dashboard
-  Fastify API
-  Docker lifecycle
-  Caddy routing
-  health, backups, and recovery
-
-<a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
 </pre>
 
-## 03 / toolchain
+<details>
+<summary>repository map</summary>
 
 <pre>
-language        TypeScript / JavaScript
-interface       React / Vue / Vite
-services        Node.js / Fastify
-data            PostgreSQL / Redis / S3 / SQLite
-hardware        ESP32-P4 / ESP32-S3 / UART / Web Serial
-operations      Docker / Caddy / GitHub Actions
+dashboard      Vue
+api            Fastify / Node.js
+data           PostgreSQL / Redis / S3
+runtime        Docker / Caddy
+operations     logs, health, rollback, and backup
+</pre>
+
+</details>
+
+[`OPEN SYSTEMS. ->`](https://github.com/b5463/systems)
+
+## 03 / workbench
+
+<pre>
+DEVICE ---> PROTOCOL ---> APPLICATION ---> DEPLOYMENT ---> OPERATIONS
+
+ESP32        KDP            React / Vue      Docker          health checks
+UART         Web Serial     TypeScript       Caddy           logs
+microSD      JSON schemas   Node.js          HTTPS           recovery
 </pre>
 
 ## 04 / links
 
 <pre>
-repositories    <a href="https://github.com/b5463?tab=repositories">github.com/b5463?tab=repositories</a>
-kino-d4         <a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
-systems         <a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
-sponsors        <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
+repos       <a href="https://github.com/b5463?tab=repositories">github.com/b5463?tab=repositories</a>
+kino-d4     <a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
+systems     <a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
+sponsors    <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
 </pre>
