@@ -1,37 +1,37 @@
 <pre>
-+--------------+--------------+--------------+--------------+
-| CAM 01       | CAM 02       | CAM 03       | CAM 04       |
-|     .--.     |      .--.    |       .--.   |        .--.  |
-|    /        |     /       |      /      |       /     |
-|    ____/    |     ____/   |      ____/  |       ____/ |
-|      01      |       02     |        03    |         04   |
-+--------------+--------------+--------------+--------------+
+b5463@github:~$ whoami
+Alexander Jakub Moravčík
 
-ALEXANDER JAKUB MORAVČÍK                                      b5463
-</pre>
-
+b5463@github:~$ cat about.txt
 I build things that live somewhere between a workbench and a server rack.
-
 The current one has four lenses and a lot of UART.
 
-## 01 / [KINO D4](https://github.com/b5463/kino-d4)
+b5463@github:~$ ls -lah ./work
+drwxr-xr-x  01  <a href="https://github.com/b5463/kino-d4">kino-d4/</a>    four-lens camera + USB workbench
+drwxr-xr-x  02  <a href="https://github.com/b5463/systems">systems/</a>    self-hosted deployment engine
 
-A handmade four-lens camera for party photographs. One shutter fires four viewpoints, keeps every original, and can turn them into a short loop with real parallax.
+b5463@github:~$ ./work/kino-d4/status
+revision    D4-V1
+state       prototype
+capture     4 viewpoints / 1 shutter
+rule        originals first
+stack       ESP32-P4 / 4x ESP32-S3 / TypeScript / Web Serial
 
-The repository contains the D4 hardware build, its wire protocol, the USB workbench, and a reference camera that can fail on command.
+b5463@github:~$ ./work/systems/status
+version     2.0 release candidate
+state       host validation
+job         zip -> container -> HTTPS
+rule        green only after a real health check
+stack       Vue / Fastify / Docker / Caddy / PostgreSQL
 
-<code>D4-V1 prototype / ESP32-P4 / four ESP32-S3 camera nodes</code>
+b5463@github:~$ printenv BUILD_RULES
+ORIGINALS_FIRST=true
+LOCAL_CONTROL=true
+OBSERVED_STATUS=true
+REPAIRABLE_HARDWARE=true
 
-## 02 / [SYSTEMS.](https://github.com/b5463/systems)
+b5463@github:~$ <a href="https://github.com/sponsors/b5463">support --next-build</a>
+opening GitHub Sponsors...
 
-A small deployment engine for my own machines. Give it a zip and it handles the container, HTTPS route, logs, health, rollback, and backups.
-
-No public signup. No rented control plane. A system is only green after it answers a real check.
-
-<code>2.0 release candidate / Vue / Fastify / Docker / Caddy</code>
-
-<pre>
-originals first  //  local control  //  observed status  //  repairable hardware
+b5463@github:~$ _
 </pre>
-
-<p align="right"><a href="https://github.com/sponsors/b5463">sponsor the next build</a></p>
