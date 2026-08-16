@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/header.svg" width="100%" alt="B5463. Alexander Jakub Moravčík. Animated ASCII camera array." />
+  <img src="assets/header.svg" width="100%" alt="B5463. Alexander Jakub Moravčík. Static ASCII camera diagnostic panel." />
 </p>
 
 <p align="center">
@@ -28,6 +28,8 @@ Four lenses fire from slightly different positions. The camera keeps all four or
 The repository has the hardware build, KDP wire protocol, USB Studio, simulator, shared schemas, and the recovery paths for when something goes wrong.
 
 <code>ESP32-P4</code> <code>4× ESP32-S3</code> <code>TypeScript</code> <code>React</code> <code>Web Serial</code>
+
+<p align="center"><img src="assets/capture-loop.svg" width="100%" alt="KINO D4 ASCII capture loop cycling through four viewpoints." /></p>
 
 **[OPEN THE CAMERA →](https://github.com/b5463/kino-d4)**
 
