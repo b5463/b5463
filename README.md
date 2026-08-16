@@ -4,7 +4,7 @@
 
 <p align="center">
   Alexander Jakub Moravčík<br>
-  hardware / software / self-hosted infrastructure
+  camera hardware / device software / self-hosted deployment
 </p>
 
 <p align="center">
@@ -12,10 +12,10 @@
   &nbsp;&nbsp;
   <a href="https://github.com/b5463/systems">[ SYSTEMS. ]</a>
   &nbsp;&nbsp;
-  <a href="https://github.com/sponsors/b5463">[ SPONSOR ]</a>
+  <a href="https://github.com/sponsors/b5463">[ FUNDING ]</a>
 </p>
 
-Most of my work sits between a physical device and the software needed to configure, inspect, recover, and ship it.
+I work on camera hardware, device protocols, control software, and self-hosted deployment.
 
 ## 00 / active
 
@@ -23,25 +23,26 @@ Most of my work sits between a physical device and the software needed to config
 +----+------------+-------------------+----------------------------------+
 | ID | PROJECT    | STATE             | SCOPE                            |
 +----+------------+-------------------+----------------------------------+
-| 01 | KINO D4    | D4-V1 prototype   | camera hardware + application    |
+| 01 | KINO D4    | D4-V1 prototype   | four-lens camera + USB studio    |
 | 02 | SYSTEMS.   | 2.0.0-rc.1        | deployment + host operations     |
 +----+------------+-------------------+----------------------------------+
 </pre>
 
 ## 01 / [KINO D4](https://github.com/b5463/kino-d4)
 
-Four camera modules capture at the same instant. The originals stay intact; the software can turn them into a short parallax loop afterward.
+KINO D4 is a handmade four-lens camera. One shutter press captures four viewpoints; the originals stay on the card, and software can turn them into a short parallax loop.
 
 <pre>
 [CAM 01]--+
 [CAM 02]--+
 [CAM 03]--+-->[shared sync]-->[ESP32-P4]-->[microSD originals]
 [CAM 04]--+                         |
-                                   +-->[USB]-->[KINO Studio]
+                                   +-->[USB / KDP]-->[KINO Studio]
 
 hardware      D4-V1 / prototype
 studio        0.9.0
 protocol      KDP 1
+storage       microSD originals first
 license       CERN-OHL-S-2.0 hardware / MIT software
 </pre>
 
@@ -49,12 +50,13 @@ license       CERN-OHL-S-2.0 hardware / MIT software
 <summary>repository map</summary>
 
 <pre>
-hardware/       D4-V1 build files, manifest, revisions, ECNs
-apps/studio/    USB control and capture interface
-apps/api/       API foundation
-packages/kdp/   KINO Device Protocol
-packages/       schemas, simulator, and test fixtures
-docs/           build, bring-up, recovery, and release notes
+hardware/                 build files, manifest, revisions, and ECNs
+apps/studio/              USB control and capture interface
+apps/api/                 API foundation
+packages/kdp/             KINO Device Protocol
+packages/schemas/         shared data contracts
+packages/test-fixtures/   simulator fixtures
+docs/                     build, bring-up, recovery, and release notes
 </pre>
 
 </details>
@@ -63,7 +65,7 @@ docs/           build, bring-up, recovery, and release notes
 
 ## 02 / [SYSTEMS.](https://github.com/b5463/systems)
 
-A self-hosted deployment engine for taking a zip build through containers, HTTPS routing, checks, rollback, and backup.
+SYSTEMS. builds a zip into a Docker deployment, routes it through Caddy, and keeps logs, health checks, rollback, and backups in the admin panel.
 
 <pre>
 [ZIP]-->[BUILD]-->[DOCKER]-->[CADDY]-->[HTTPS]
@@ -74,8 +76,9 @@ A self-hosted deployment engine for taking a zip build through containers, HTTPS
                     +-->[BACKUPS]
 
 release       2.0.0-rc.1
-access        admin only
-validation    Windows host pending
+access        authenticated admins / two maximum
+production    Windows host
+validation    real Windows host pending
 license       PolyForm Noncommercial 1.0.0
 </pre>
 
@@ -97,11 +100,11 @@ operations     logs, health, rollback, and backup
 ## 03 / workbench
 
 <pre>
-DEVICE ---> PROTOCOL ---> APPLICATION ---> DEPLOYMENT ---> OPERATIONS
-
-ESP32        KDP            React / Vue      Docker          health checks
-UART         Web Serial     TypeScript       Caddy           logs
-microSD      JSON schemas   Node.js          HTTPS           recovery
+camera       ESP32-P4 / ESP32-S3 / microSD
+protocol     KDP / Web Serial / JSON schemas
+interface    TypeScript / React / Vue / Vite
+services     Node.js / Fastify / PostgreSQL / Redis
+host         Docker / Caddy / HTTPS / GitHub Actions
 </pre>
 
 ## 04 / links
@@ -110,5 +113,5 @@ microSD      JSON schemas   Node.js          HTTPS           recovery
 repos       <a href="https://github.com/b5463?tab=repositories">github.com/b5463?tab=repositories</a>
 kino-d4     <a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
 systems     <a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
-sponsors    <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
+funding     <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
 </pre>
