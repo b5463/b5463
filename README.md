@@ -1,46 +1,100 @@
 <pre>
-+----------------------------------------------------------------------------+
-| b5463                                                                      |
-| Alexander Jakub Moravčík                                                   |
-+----------------------------------------------------------------------------+
+ ____   ____    _  _     __     _____
+| __ ) | ___|  | || |   / /_   |___ /
+|  _  |___   | || |_ | '_     |_ | |_) | ___) | |__   _|| (_) |  ___) |
+|____/ |____/     |_|   ___/  |____/
 
-$ profile
-current          KINO D4
-also             SYSTEMS.
-work             hardware / web software / self-hosted infrastructure
+ALEXANDER JAKUB MORAVČÍK
+hardware / software / self-hosted infrastructure
+</pre>
 
-$ project kino-d4
-status           D4-V1 prototype
-purpose          four-camera synchronized capture
-repository       <a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
+<p align="center">
+  <a href="https://github.com/b5463/kino-d4">[ kino-d4 ]</a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/b5463/systems">[ systems ]</a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/sponsors/b5463">[ sponsors ]</a>
+</p>
+
+## 00 / overview
+
+<pre>
++-- active projects -----------------------------------------------------------+
+|                                                                             |
+|  01  KINO D4       D4-V1 prototype        hardware + application           |
+|  02  SYSTEMS.      2.0 release candidate  deployment + operations          |
+|                                                                             |
++-----------------------------------------------------------------------------+
+</pre>
+
+## 01 / [KINO D4](https://github.com/b5463/kino-d4)
+
+<pre>
+project       four-camera digital camera and USB workbench
+hardware      D4-V1 prototype
+studio        0.9.0
+protocol      KDP 1
+license       MIT software / CERN-OHL-S-2.0 hardware
 
 [CAM 1]---[CAM 2]----[CAM 3]-----+-->[ESP32-P4]-->[microSD originals]
 [CAM 4]----/
              shared sync
 
-hardware         ESP32-P4 / 4x ESP32-S3 camera nodes
-software         KDP / Studio / schemas / simulator / API
-capture          4 viewpoints / 1 shutter
+repository
+  hardware documentation
+  KDP wire protocol
+  KINO Studio
+  schemas and simulator
+  API foundation
 
-$ project systems
-status           2.0 release candidate
-purpose          self-hosted application deployment
-repository       <a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
+<a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
+</pre>
 
-[ZIP]-->[BUILD]-->[DOCKER]-->[CADDY]-->[HTTPS]
+## 02 / [SYSTEMS.](https://github.com/b5463/systems)
 
-services         deploys / logs / health / rollback / backups
-access           admin only
-runtime          Vue / Fastify / Docker / Caddy / PostgreSQL
+<pre>
+project       self-hosted deployment engine
+version       2.0.0-rc.1
+access        admin only
+validation    Windows host pending
+license       PolyForm Noncommercial 1.0.0
 
-$ stack
-hardware         ESP32-P4 / ESP32-S3 / UART / Web Serial
-application      TypeScript / React / Vue / Node.js / Fastify
-infrastructure   PostgreSQL / Redis / Docker / Caddy / S3
+[ZIP]
+  |
+[BUILD]
+  |
+[DOCKER]-->[LOGS]-->[HEALTH]-->[ROLLBACK]
+  |
+[CADDY]
+  |
+[HTTPS]
 
-$ links
-projects         <a href="https://github.com/b5463?tab=repositories">github.com/b5463?tab=repositories</a>
-sponsors         <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
+repository
+  Vue dashboard
+  Fastify API
+  Docker lifecycle
+  Caddy routing
+  health, backups, and recovery
 
-$ _
+<a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
+</pre>
+
+## 03 / toolchain
+
+<pre>
+language        TypeScript / JavaScript
+interface       React / Vue / Vite
+services        Node.js / Fastify
+data            PostgreSQL / Redis / S3 / SQLite
+hardware        ESP32-P4 / ESP32-S3 / UART / Web Serial
+operations      Docker / Caddy / GitHub Actions
+</pre>
+
+## 04 / links
+
+<pre>
+repositories    <a href="https://github.com/b5463?tab=repositories">github.com/b5463?tab=repositories</a>
+kino-d4         <a href="https://github.com/b5463/kino-d4">github.com/b5463/kino-d4</a>
+systems         <a href="https://github.com/b5463/systems">github.com/b5463/systems</a>
+sponsors        <a href="https://github.com/sponsors/b5463">github.com/sponsors/b5463</a>
 </pre>
