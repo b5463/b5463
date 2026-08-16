@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="300" viewBox="0 0 960 300" role="img" aria-labelledby="title desc">
+  <title id="title">Alexander Jakub Moravčík</title>
+  <desc id="desc">Animated engineering-style header with four synchronized camera cells for KINO D4.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#20252b" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="edge" x1="0" x2="1">
+      <stop offset="0" stop-color="#f2c14e"/>
+      <stop offset="0.55" stop-color="#f4f1e8"/>
+      <stop offset="1" stop-color="#6d7680"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .label { font-size: 12px; letter-spacing: 2.4px; fill: #8d959e; }
+      .name { font-size: 46px; font-weight: 700; letter-spacing: 1px; fill: #f5f1e8; }
+      .copy { font-size: 14px; letter-spacing: 1.1px; fill: #c1c6ca; }
+      .camera { opacity: .34; }
+      @media (prefers-reduced-motion: reduce) { .motion { display: none; } }
+    </style>
+  </defs>
+
+  <rect width="960" height="300" rx="20" fill="#0b0e11"/>
+  <rect width="960" height="300" rx="20" fill="url(#grid)" opacity=".72"/>
+  <rect x="1" y="1" width="958" height="298" rx="19" fill="none" stroke="#343b43" stroke-width="2"/>
+  <rect x="28" y="28" width="904" height="244" rx="10" fill="#0b0e11" fill-opacity=".72" stroke="#2b3138"/>
+
+  <g class="mono">
+    <text x="52" y="57" class="label">B5463 / BUILD LOG</text>
+    <rect x="52" y="73" width="352" height="3" rx="1.5" fill="url(#edge)"/>
+    <text x="52" y="126" class="name">ALEXANDER</text>
+    <text x="52" y="177" class="name">JAKUB MORAVČÍK</text>
+    <text x="54" y="216" class="copy">CAMERAS  /  SELF-HOSTED SYSTEMS  /  HONEST STATUS</text>
+
+    <g transform="translate(648 60)">
+      <text x="0" y="0" class="label">SYNC ARRAY / D4</text>
+      <path d="M18 136V154H192V136" fill="none" stroke="#59616a" stroke-width="2"/>
+      <path d="M47 154V169H163V154" fill="none" stroke="#59616a" stroke-width="2"/>
+      <circle cx="105" cy="169" r="4" fill="#f2c14e" filter="url(#glow)">
+        <animate class="motion" attributeName="opacity" values=".35;1;.35" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+
+      <g class="camera" transform="translate(0 32)">
+        <animate class="motion" attributeName="opacity" values=".34;1;.34;.34" keyTimes="0;.12;.25;1" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+        <rect width="46" height="92" rx="5" fill="#12171b" stroke="#87919a" stroke-width="2"/>
+        <circle cx="23" cy="36" r="12" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+        <circle cx="23" cy="36" r="4" fill="#f2c14e"/>
+        <path d="M9 66H37M14 74H32" stroke="#59616a"/>
+        <text x="17" y="86" font-size="10" fill="#8d959e">01</text>
+      </g>
+      <g class="camera" transform="translate(58 32)">
+        <animate class="motion" attributeName="opacity" values=".34;.34;1;.34;.34" keyTimes="0;.18;.3;.43;1" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+        <rect width="46" height="92" rx="5" fill="#12171b" stroke="#87919a" stroke-width="2"/>
+        <circle cx="23" cy="36" r="12" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+        <circle cx="23" cy="36" r="4" fill="#f2c14e"/>
+        <path d="M9 66H37M14 74H32" stroke="#59616a"/>
+        <text x="17" y="86" font-size="10" fill="#8d959e">02</text>
+      </g>
+      <g class="camera" transform="translate(116 32)">
+        <animate class="motion" attributeName="opacity" values=".34;.34;1;.34;.34" keyTimes="0;.36;.48;.61;1" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+        <rect width="46" height="92" rx="5" fill="#12171b" stroke="#87919a" stroke-width="2"/>
+        <circle cx="23" cy="36" r="12" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+        <circle cx="23" cy="36" r="4" fill="#f2c14e"/>
+        <path d="M9 66H37M14 74H32" stroke="#59616a"/>
+        <text x="17" y="86" font-size="10" fill="#8d959e">03</text>
+      </g>
+      <g class="camera" transform="translate(174 32)">
+        <animate class="motion" attributeName="opacity" values=".34;.34;1;.34;.34" keyTimes="0;.54;.66;.79;1" dur="2.8s" begin="0s" repeatCount="indefinite"/>
+        <rect width="46" height="92" rx="5" fill="#12171b" stroke="#87919a" stroke-width="2"/>
+        <circle cx="23" cy="36" r="12" fill="none" stroke="#f5f1e8" stroke-width="2"/>
+        <circle cx="23" cy="36" r="4" fill="#f2c14e"/>
+        <path d="M9 66H37M14 74H32" stroke="#59616a"/>
+        <text x="17" y="86" font-size="10" fill="#8d959e">04</text>
+      </g>
+
+      <text x="24" y="204" class="label">4 VIEWPOINTS / 1 SHUTTER</text>
+    </g>
+
+    <text x="52" y="256" class="label">PARTS → WIRES → PROTOCOL → APP → OPERATIONS</text>
+    <text x="858" y="256" class="label">V1</text>
+  </g>
+
+  <rect class="motion" x="29" y="30" width="902" height="1" fill="#f2c14e" opacity=".24">
+    <animate attributeName="y" values="30;270;30" dur="7s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".08;.32;.08" dur="7s" repeatCount="indefinite"/>
+  </rect>
+</svg>
