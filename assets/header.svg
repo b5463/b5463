@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="460" viewBox="0 0 1000 460" role="img" aria-labelledby="title desc">
   <title id="title">B5463. Alexander Jakub Moravčík.</title>
-  <desc id="desc">Animated ASCII profile header cycling through four synchronized KINO D4 camera frames.</desc>
+  <desc id="desc">Static ASCII profile header with a KINO D4 camera diagnostic panel.</desc>
   <defs>
     <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#d7d9d8"/>
@@ -31,7 +31,6 @@
       .tiny { font-size: 11px; letter-spacing: 1.5px; fill: #9b6030; }
       .ascii { font-size: 24px; font-weight: 700; fill: #ece9df; }
       .screen { font-size: 15px; fill: #d8d8cf; }
-      @media (prefers-reduced-motion: reduce) { .motion { display: none; } }
     </style>
   </defs>
 
@@ -69,7 +68,6 @@
 
     <g transform="translate(575 136)">
       <g opacity="1">
-        <animate class="motion" attributeName="opacity" values="1;0;0;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
         <text class="screen" xml:space="preserve">
           <tspan x="0" dy="0">+---------------------------------+</tspan>
           <tspan x="0" dy="22">| CAPTURE 01/04       SYNC: ARMED |</tspan>
@@ -82,7 +80,6 @@
         </text>
       </g>
       <g opacity="0">
-        <animate class="motion" attributeName="opacity" values="0;1;0;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
         <text class="screen" xml:space="preserve">
           <tspan x="0" dy="0">+---------------------------------+</tspan>
           <tspan x="0" dy="22">| CAPTURE 02/04       SYNC: ARMED |</tspan>
@@ -95,7 +92,6 @@
         </text>
       </g>
       <g opacity="0">
-        <animate class="motion" attributeName="opacity" values="0;0;1;0" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
         <text class="screen" xml:space="preserve">
           <tspan x="0" dy="0">+---------------------------------+</tspan>
           <tspan x="0" dy="22">| CAPTURE 03/04       SYNC: ARMED |</tspan>
@@ -108,7 +104,6 @@
         </text>
       </g>
       <g opacity="0">
-        <animate class="motion" attributeName="opacity" values="0;0;0;1" keyTimes="0;.25;.5;.75" dur="4s" calcMode="discrete" repeatCount="indefinite"/>
         <text class="screen" xml:space="preserve">
           <tspan x="0" dy="0">+---------------------------------+</tspan>
           <tspan x="0" dy="22">| CAPTURE 04/04       SYNC: ARMED |</tspan>
@@ -121,11 +116,6 @@
         </text>
       </g>
     </g>
-
-    <rect class="motion" x="554" y="116" width="2" height="260" fill="#b1763c" opacity=".8">
-      <animate attributeName="x" values="554;923;554" dur="6s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values=".15;.85;.15" dur="6s" repeatCount="indefinite"/>
-    </rect>
 
     <text x="78" y="415" class="tiny">[ PARTS ]--[ WIRES ]--[ PROTOCOL ]--[ INTERFACE ]--[ OPERATIONS ]</text>
     <text x="860" y="415" class="tiny">REV. 02</text>
