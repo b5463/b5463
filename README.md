@@ -61,7 +61,7 @@ docs/                     build, bring-up, recovery, and release notes
 
 </details>
 
-[`OPEN KINO D4 ->`](https://github.com/b5463/kino-d4)
+[`REPOSITORY ->`](https://github.com/b5463/kino-d4) · [`PROJECT ->`](https://github.com/users/b5463/projects/3)
 
 ## 02 / [SYSTEMS.](https://github.com/b5463/systems)
 
